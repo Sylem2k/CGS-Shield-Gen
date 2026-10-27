@@ -1,0 +1,5 @@
+MatPBRBasic {
+ EmissiveMap "{A1FC59F193A4E4EB}Assets/Generator/Data/War_Gen-Small_Reactor_EM.edds"
+ BCRMap "{CA15B45D7DC2E577}Assets/Generator/Data/War_Gen-Small_Reactor_BCR.edds"
+ NMOMap "{F2CD0FCFA4B5B7E9}Assets/Generator/Data/War_Gen-Small_Reactor_NMO.edds"
+}

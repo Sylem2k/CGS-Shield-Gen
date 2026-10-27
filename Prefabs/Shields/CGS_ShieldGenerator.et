@@ -1,0 +1,83 @@
+GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/DestructibleMultiPhase_Props_Base.et" {
+ ID "73BCE4228F37408B"
+ components {
+  CGS_ShieldGeneratorComponent "{57F6DAF6BD5A4BCB}" {
+   m_bPoweredOnSpawn 0
+   m_fInitialStartupSeconds 20
+   m_fInitialShutdownSeconds 20
+   m_bInitialPlayerPowerAllowed 1
+   m_bInitialPlayerRadiusAllowed 1
+   m_bInitialRegenEnabled 1
+   m_fInitialRadius 75
+   m_fInitialCapacity 5000
+   m_fInitialRegen 100
+   m_fRegenDelay 5
+   m_fBrokenDelay 15
+   m_fReactivationFraction 0.25
+   m_bInitialBlockTrue 1
+   m_fInitialTrueCost 1
+   m_sBubblePrefab "{3812157D49E1434A}Prefabs/Shields/CGS_ShieldBubble.et"
+   m_bInitialInterceptProjectiles 1
+   m_fInitialProjectileDamage 250
+  }
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{A4048C2AA75EF832}Common/Models/Default.xob"
+  }
+  SCR_EditableEntityComponent "{7D14E36810044259}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{BC0BF2FC737740DA}" {
+    Name "CGS Shield Generator"
+    Description "CGS shield generator. Double-click for power, radius, delay and damage protections."
+    Icon "{A489F552FB7489C3}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Custom.edds"
+    m_aAuthoredLabels {
+     CONTENT_MODDED
+    }
+    m_aAutoLabels {
+     ENTITYTYPE_OBJECT SIZE_S
+    }
+   }
+   m_Flags 773
+  }
+  ActionsManagerComponent "{3F33DBAD07AC4BE1}" {
+   ActionContexts {
+    UserActionContext "{AAF41EB1FE2B4634}" {
+     ContextName "Shield Generator"
+     Position PointInfo "{F7E07D8355554360}" {
+      Offset 0 1.1 0
+     }
+     Radius 2
+     Omnidirectional 1
+    }
+   }
+   additionalActions {
+    CGS_ShieldGeneratorAction "{52154397DE174F6D}" {
+     ParentContextList {
+      "Shield Generator"
+     }
+     UIInfo SCR_ActionUIInfo "{F30A310032EA4D6E}" {
+      Name "Start/Stop Shield Generator"
+     }
+    }
+    CGS_ShieldGeneratorRadiusUpAction "{5E6DB5CD24804075}" {
+     ParentContextList {
+      "Shield Generator"
+     }
+     UIInfo SCR_ActionUIInfo "{0B83DF1CFFF2484C}" {
+      Name "Increase Shield Radius"
+     }
+    }
+    CGS_ShieldGeneratorRadiusDownAction "{45027FE278794921}" {
+     ParentContextList {
+      "Shield Generator"
+     }
+     UIInfo SCR_ActionUIInfo "{0FA9ED9B4EF340F7}" {
+      Name "Decrease Shield Radius"
+     }
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+ }
+ coords 0 0 0
+}

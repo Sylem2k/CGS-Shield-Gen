@@ -1,0 +1,29 @@
+GenericEntity : "{BE4CBA1158124310}Prefabs/Shields/CGS_ShieldGenerator.et" {
+ ID "D599F6C52BA34BE0"
+ components {
+  CGS_ShieldGeneratorComponent "{57F6DAF6BD5A4BCB}" {
+   m_fInitialStartupSeconds 15
+   m_fBubbleMeshRadius 0
+  }
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{EC6FB38E709769BA}Assets/Generator/War_Gen-Small-ebt.xob"
+  }
+  SCR_PreviewEntityComponent "{7C87B53E0E3C4191}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
+   m_bRuntime 0
+   m_PreviewPrefab "{BE4CBA1158124310}Prefabs/Shields/CGS_ShieldGenerator.et"
+   m_aEntries {
+    SCR_BasePreviewEntry "{47CED1E7BE4342BA}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags EDITABLE
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
+ coords 81.375 4.621 69.523
+}

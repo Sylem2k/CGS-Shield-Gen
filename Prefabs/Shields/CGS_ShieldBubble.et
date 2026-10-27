@@ -1,0 +1,14 @@
+GenericEntity {
+ ID "6BCF7D3136B94248"
+ components {
+  MeshObject "{B4CF183B4BD1487D}" {
+   Object "{F60A3CDE13254462}Assets/Shield/CGS_Shield_Bubble.xob"
+   Materials {
+    MaterialAssignClass "{FEA84786DAC94C68}" {
+     SourceMaterial "DefaultGeneratedMaterial"
+     AssignedMaterial "{C32B81F48A864E99}Assets/Shield/Data/CGS_Shield_Bubble.emat"
+    }
+   }
+  }
+ }
+}

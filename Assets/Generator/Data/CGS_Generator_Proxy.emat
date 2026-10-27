@@ -1,0 +1,4 @@
+MatPBRBasic {
+ BCRMap "{76102D6DA1D04C50}Assets/Generator/Data/CGS_Generator_BCR.edds"
+ NMOMap "{75C0E6E2F4FA4C2B}Assets/Generator/Data/CGS_Generator_NMO.edds"
+}

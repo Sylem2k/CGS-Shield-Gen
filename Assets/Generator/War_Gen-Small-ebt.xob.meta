@@ -1,0 +1,67 @@
+MetaFileClass {
+ Name "{EC6FB38E709769BA}Assets/Generator/War_Gen-Small-ebt.xob"
+ Configurations {
+  FBXResourceClass PC {
+   ExportSkinning 1
+   MaterialAssigns {
+    MaterialAssignClass "{6AB655FB482C9EDF}" {
+     SourceMaterial "War_GenSmall_Container"
+     AssignedMaterial "{24F59EF2B343E77F}Assets/Generator/Data/War_GenSmall_Container.emat"
+    }
+    MaterialAssignClass "{6AB655FB482C913B}" {
+     SourceMaterial "War_GenSmall_Reactor"
+     AssignedMaterial "{328FC5E640663362}Assets/Generator/Data/War_GenSmall_Reactor.emat"
+    }
+   }
+   MeshParams {
+    MeshParam "War_Gen-Small_Container" {
+    }
+    MeshParam "War_Gen-Small_Reactor" {
+    }
+   }
+   GeometryParams {
+    GeometryParam "UTM_War_Gen-Small_Container" {
+     LayerPreset "Prop"
+     SurfaceProperties {
+      "{A40222E16991AB27}Common/Materials/Game/PersonalProtection/manganese_steel_1.12mm.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+    GeometryParam "UTM_War_Gen-Small_Container.001" {
+     LayerPreset "PropFireView"
+     SurfaceProperties {
+      "{A40222E16991AB27}Common/Materials/Game/PersonalProtection/manganese_steel_1.12mm.gamemat"
+     }
+     Mass 0
+     Margin 0
+    }
+   }
+   Common TXOCommonClass "{6AB655FB480A43C2}" : "{0877E7C4BB2B2C9A}Configs/System/ResourceTypes/PC/MeshObjectCommon.conf" {
+   }
+   ApplicationVendor "Blender Foundation"
+   ApplicationName "Blender (stable FBX IO)"
+   ApplicationVersion "4.5.12 LTS"
+  }
+  FBXResourceClass XBOX_ONE : PC {
+   Common TXOCommonClass "{6AB655FB480A47CF}" : "{9D5B6207F7628CE2}Configs/System/ResourceTypes/XBOX_ONE/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass XBOX_SERIES : PC {
+   Common TXOCommonClass "{6AB655FB480A3934}" : "{DD9F02115C764647}Configs/System/ResourceTypes/XBOX_SERIES/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS4 : PC {
+   Common TXOCommonClass "{6AB655FB480A3985}" : "{53EC476BC921D99A}Configs/System/ResourceTypes/PS4/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass PS5 : PC {
+   Common TXOCommonClass "{6AB655FB480A380E}" : "{F62AA8E7B8EA9D26}Configs/System/ResourceTypes/PS5/MeshObjectCommon.conf" {
+   }
+  }
+  FBXResourceClass HEADLESS : PC {
+   Common TXOCommonClass "{6AB655FB480A3881}" : "{3A5B3356978039E8}Configs/System/ResourceTypes/HEADLESS/MeshObjectCommon.conf" {
+   }
+  }
+ }
+}

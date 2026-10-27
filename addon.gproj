@@ -1,0 +1,8 @@
+GameProject {
+ ID "CGSShieldGen"
+ GUID "6AAA06DA7555B7BD"
+ TITLE "CGS Shield Gen"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}

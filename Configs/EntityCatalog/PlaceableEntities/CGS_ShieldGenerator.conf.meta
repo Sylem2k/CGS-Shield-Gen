@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{B4DBDE6EBC7448EB}Configs/EntityCatalog/PlaceableEntities/CGS_ShieldGenerator.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}
