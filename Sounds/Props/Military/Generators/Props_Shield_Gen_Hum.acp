@@ -425,7 +425,7 @@ AudioClass {
    "Fade in time" 800
    Samples {
     AudioBankSampleClass Sample {
-     Filename "{6143321B04A138B9}Sounds/Props/Military/Generators/Sampes/Props_GeneratorMilitary_LP.wav"
+     Filename "{6D95FB8A28062B7F}Sounds/War-Small-Gen.wav"
     }
    }
   }
@@ -437,7 +437,7 @@ AudioClass {
    Volume -13
    Samples {
     AudioBankSampleClass Sample {
-     Filename "{D4F217170EFEBCBF}Sounds/Props/Military/Generators/Sampes/Props_GeneratorMilitary_TurnOff.wav"
+     Filename "{6D95FB8A28062B7F}Sounds/War-Small-Gen.wav"
     }
    }
   }
@@ -449,7 +449,7 @@ AudioClass {
    Volume -13
    Samples {
     AudioBankSampleClass Sample {
-     Filename "{2425CC0780BF5811}Sounds/Props/Military/Generators/Sampes/Props_GeneratorMilitary_TurnOn.wav"
+     Filename "{6D95FB8A28062B7F}Sounds/War-Small-Gen.wav"
     }
    }
   }

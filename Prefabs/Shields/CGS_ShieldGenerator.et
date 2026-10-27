@@ -20,6 +20,13 @@ GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/DestructibleMultiPhase_Pro
    m_bInitialInterceptProjectiles 1
    m_fInitialProjectileDamage 250
   }
+  // Single positional generator hum; no extra generator mesh or shield entity.
+  SimpleSoundComponent "{A8917C4F67254F6D}" {
+   Filenames {
+    "{C8F1CF6CBA14D8B4}Sounds/Props/Military/Generators/Props_Shield_Gen_Hum.acp"
+   }
+   OnFrameUpdate 1
+  }
   MeshObject "{5872F0EB7FA40561}" {
    Object "{A4048C2AA75EF832}Common/Models/Default.xob"
   }
