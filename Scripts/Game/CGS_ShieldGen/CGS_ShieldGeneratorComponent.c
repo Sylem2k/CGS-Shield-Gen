@@ -210,6 +210,10 @@ class CGS_ShieldGeneratorComponent : ScriptComponent
 	protected bool m_bWarnedBubbleLoad;
 	protected bool m_bLoggedBubbleSuccess;
 
+	// The sound component plays locally on each client; the server only replicates the power state.
+	protected SimpleSoundComponent m_pHumSound;
+	protected bool m_bHumPlaying;
+
 	// Shared heartbeat avoids one continuously running call-queue task per generator.
 	protected static ref array<CGS_ShieldGeneratorComponent> s_aGenerators = {};
 	protected static int s_iHeartbeatMs;
@@ -277,11 +281,13 @@ class CGS_ShieldGeneratorComponent : ScriptComponent
 
 		// Spawn/size the local visual without waiting for a separate power-state event.
 		UpdateBubble();
+		UpdateHumSound();
 	}
 
 	override void OnDelete(IEntity owner)
 	{
 		s_aGenerators.RemoveItem(this);
+		StopHumSound();
 		DeleteBubble();
 		super.OnDelete(owner);
 	}
@@ -386,11 +392,45 @@ class CGS_ShieldGeneratorComponent : ScriptComponent
 			}
 		}
 		UpdateBubble();
+		UpdateHumSound();
 	}
 
 	protected void OnRepState()
 	{
 		UpdateBubble();
+		UpdateHumSound();
+	}
+
+	// A replicated power-state change is enough to start and stop the local loop.
+	// STARTING / ON / STOPPING hum; OFF / destroyed are silent.
+	protected void UpdateHumSound()
+	{
+		IEntity owner = GetOwner();
+		if (!owner)
+			return;
+
+		if (!m_pHumSound)
+			m_pHumSound = SimpleSoundComponent.Cast(owner.FindComponent(SimpleSoundComponent));
+		if (!m_pHumSound)
+			return;
+
+		bool shouldHum = !m_bDestroyed && m_iPowerState != 0;
+		if (shouldHum == m_bHumPlaying)
+			return;
+
+		if (shouldHum)
+			m_pHumSound.PlayStr("SOUND_GENERATOR_LP");
+		else
+			m_pHumSound.TerminateAll();
+
+		m_bHumPlaying = shouldHum;
+	}
+
+	protected void StopHumSound()
+	{
+		if (m_pHumSound)
+			m_pHumSound.TerminateAll();
+		m_bHumPlaying = false;
 	}
 
 	bool IsPowered() { return m_bPowered; }
